@@ -5,15 +5,17 @@
 2. [Install Chocolatey](https://chocolatey.org/install) for packages not available in winget
 3. Install Windows Powertoys:
    * `winget install powertoys`
-4. Install [Fira Code Nerd Font](https://github.com/tonsky/FiraCode) for Starship to render properly.
+4. Install posh-git:
+   * `choco install poshgit`
+5. Install [Fira Code Nerd Font](https://github.com/tonsky/FiraCode) for Starship to render properly.
    * `choco install firacode` in an Administrative Prompt
-5. Install [Starship](https://starship.rs/):
+6. Install [Starship](https://starship.rs/):
    * `choco install starship` in an Administrative Prompt
    * There should be no need to add the init script since it should be called in the terminal-specific scripts in [shared](./shared)
      * Init script instructions available [here](https://starship.rs/guide/#%F0%9F%9A%80-installation)
-6. Install git:
+7. Install git:
    * `winget install git`
-7. Install Init scripts for respective shells:
+8. Install Init scripts for respective shells:
     * Powershell 7+:
       1. Open powershell profile (create file if needed):
          * `notepad $PROFILE`
