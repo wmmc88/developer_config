@@ -6,7 +6,8 @@
 3. Install Windows Powertoys:
    * `winget install powertoys`
 4. Install posh-git:
-   * `choco install poshgit`
+   * `PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force`
+      * To update: `PowerShellGet\Update-Module posh-git`
 5. Install [Fira Code Nerd Font](https://github.com/tonsky/FiraCode) for Starship to render properly.
    * `choco install firacode` in an Administrative Prompt
 6. Install [Starship](https://starship.rs/):
