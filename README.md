@@ -21,6 +21,10 @@
          * `notepad $PROFILE`
       2. Add the following line to the script :
          * `. '<SOME PATH>\developer_config\windows\Microsoft.PowerShell_profile.ps1'`
+9. Install ROS:
+   * Most stable way right now is to use [prebuilt binaries](https://docs.ros.org/en/foxy/Installation/Windows-Install-Binary.html)
+      * `choco install python3 --params "/InstallDir:C:\python38"`: ros2 doc is bugged?
+      * Need to add QT_QPA_PLATFORM_PLUGIN_PATH env variable with value of C:\dev\ros2_foxy\bin\platforms
 
 ## Updating Packages
 
