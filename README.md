@@ -1,13 +1,31 @@
 # Developer Config and Setup
 
 ## Ubuntu Setup
-https://apt.kitware.com/
-https://apt.llvm.org/
 
-* Install Starship:
-  * For no admin:
-    * ``
-      * `cargo install starship`
+1. Install some basic tools
+   * sudo apt install git curl vim
+2. Install [Fira Code Nerd Font](https://github.com/tonsky/FiraCode) for Starship to render properly.
+   * `sudo apt install fonts-firacode`
+3. Install latest stable [LLVM](https://apt.llvm.org/)
+   * See "Automatic installation script" and "Default packages" steps
+4. Install [Rust](https://www.rust-lang.org/tools/install)
+5. Install [Starship](https://starship.rs/):
+   * Install Dependencies: ` sudo apt install libssl-dev`
+   * Install Starship from rust: `cargo install starship`
+   * To update Starship: `cargo update starship`
+6. Install [Powershell 7](https://docs.microsoft.com/en-us/powershell/scripting/install/install-ubuntu?view=powershell-7.2#installation-via-package-repository)
+7. Install Init scripts for respective shells:
+    * Bash:
+      1. Open .bashrc:
+         * `gedit ~/.bashrc`
+      2. Add the following line to the script :
+         * `source "<SOME PATH>/developer_config/linux/.bashrc"`
+    * Powershell 7+:
+      1. Open powershell profile (create file if needed):
+         * `New-Item -ItemType File -Path $PROFILE -Force`
+         * `vim $PROFILE`
+      2. Add the following line to the script :
+         * `. '<SOME PATH>/developer_config/linux/Microsoft.PowerShell_profile.ps1'`
 
 ## Windows Setup
 
