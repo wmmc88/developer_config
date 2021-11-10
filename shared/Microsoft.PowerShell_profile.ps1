@@ -1,8 +1,3 @@
-# Posh-Git
-Import-Module posh-git
-
 # Starship
+$ENV:STARSHIP_CONFIG = Join-Path -Path $PSScriptRoot -ChildPath starship_config.toml
 Invoke-Expression (&starship init powershell)
-
-# ROS
-. C:\dev\ros2_foxy\local_setup.ps1

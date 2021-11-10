@@ -6,3 +6,9 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
+
+# Posh-Git
+Import-Module posh-git
+
+# ROS
+. C:\dev\ros2_foxy\local_setup.ps1
