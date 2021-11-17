@@ -1,7 +1,7 @@
 format = "${custom.active_shell}$all"
 
 [custom.active_shell]
-description = "Show the currenlt active shell"
+description = "Show the current active shell"
 command="echo -n '('$STARSHIP_SHELL')'"
 when = '[ 0 ]' # always
 shell = ["bash", "--noprofile", "--norc"]
