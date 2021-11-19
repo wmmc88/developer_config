@@ -30,30 +30,30 @@
 
 ## Windows Setup
 
-1. Install Init scripts for respective shells:
+1. Install [winget](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7.1#install-powershell-via-the-windows-package-manager), [Powershell 7](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7.1#install-powershell-via-the-windows-package-manager), [Windows Terminal Preview](https://www.microsoft.com/store/productId/9N8G5RFZ9XK3)
+2. Install Init scripts for respective shells:
    * Powershell 7+:
       1. Open powershell profile (create file if needed):
          * `notepad $PROFILE`
       2. Add the following line to the script :
          * `. '<SOME PATH>\developer_config\windows\Microsoft.PowerShell_profile.ps1'`
-2. Install [winget](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7.1#install-powershell-via-the-windows-package-manager), [Powershell 7](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7.1#install-powershell-via-the-windows-package-manager), [Windows Terminal Preview](https://www.microsoft.com/store/productId/9N8G5RFZ9XK3)
 3. [Install Chocolatey](https://chocolatey.org/install) for packages not available in winget
 4. Install Windows Powertoys:
    * `winget install powertoys`
-5. Install posh-git:
+5. Install git:
+   * `winget install git`
+6. Install posh-git:
    * `PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force`
       * To update: `PowerShellGet\Update-Module posh-git`
-6. Install act for local github actions:
-   * Requires Docker Desktop Installed
-   * `choco install act-cli`
 7. Install [Fira Code Nerd Font](https://github.com/tonsky/FiraCode) for Starship to render properly.
    * `choco install firacode` in an Administrative Prompt
-8. Install [Starship](https://starship.rs/):
+8.  Install [Starship](https://starship.rs/):
    * `choco install starship` in an Administrative Prompt
    * There should be no need to add the init script since it should be called in the terminal-specific scripts in [shared](./shared)
      * Init script instructions available [here](https://starship.rs/guide/#%F0%9F%9A%80-installation)
-9. Install git:
-   * `winget install git`
+9.  Install act for local github actions:
+   * Requires Docker Desktop Installed
+   * `choco install act-cli` in an Administrative Prompt
 10. Install ROS:
     * Most stable way right now is to use [prebuilt binaries](https://docs.ros.org/en/foxy/Installation/Windows-Install-Binary.html)
       * `choco install python3 --params "/InstallDir:C:\python38"`: ros2 doc is bugged?
