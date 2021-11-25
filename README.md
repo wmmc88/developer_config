@@ -47,17 +47,18 @@
       * To update: `PowerShellGet\Update-Module posh-git`
 7. Install [Fira Code Nerd Font](https://github.com/tonsky/FiraCode) for Starship to render properly.
    * `choco install firacode` in an Administrative Prompt
-8.  Install [Starship](https://starship.rs/):
-   * `choco install starship` in an Administrative Prompt
-   * There should be no need to add the init script since it should be called in the terminal-specific scripts in [shared](./shared)
-     * Init script instructions available [here](https://starship.rs/guide/#%F0%9F%9A%80-installation)
-9.  Install act for local github actions:
+8. Install [Rust](https://www.rust-lang.org/tools/install)
+   * This should be done natively in Windows and also within WSL
+9.  Install [Starship](https://starship.rs/):
+   * These steps should be done natively in Windows and also within WSL
+     * Install Starship from rust: `cargo install starship`
+     * To update Starship: `cargo update starship`
+10.  Install ROS Rolling Ridley:
+   * Installing from Source Checkout: https://docs.ros.org/en/rolling/Installation/Windows-Development-Setup.html
+   * Maintaining Source Checkout: https://docs.ros.org/en/rolling/Installation/Maintaining-a-Source-Checkout.html 
+11. Install act for local github actions:
    * Requires Docker Desktop Installed
    * `choco install act-cli` in an Administrative Prompt
-10. Install ROS:
-    * Most stable way right now is to use [prebuilt binaries](https://docs.ros.org/en/foxy/Installation/Windows-Install-Binary.html)
-      * `choco install python3 --params "/InstallDir:C:\python38"`: ros2 doc is bugged?
-      * Need to add QT_QPA_PLATFORM_PLUGIN_PATH env variable with value of C:\dev\ros2_foxy\bin\platforms
 
 ## Updating Packages
 

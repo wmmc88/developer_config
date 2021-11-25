@@ -1,7 +1,13 @@
-format = "${custom.active_shell}$all"
+format = "${custom.bash_active}${custom.powershell_active}$all"
 
-[custom.active_shell]
+[custom.powershell_active]
+command = 'Write-Output "($env:STARSHIP_SHELL)"'
 description = "Show the current active shell"
-command="echo -n '('$STARSHIP_SHELL')'"
-when = '[ 0 ]' # always
+shell = ["pwsh.exe", "-NoProfile", "-Command"]
+when = '$env:STARSHIP_SHELL -eq "powershell"'
+
+[custom.bash_active]
+command = "echo -n '('$STARSHIP_SHELL')'"
+description = "Show the current active shell"
 shell = ["bash", "--noprofile", "--norc"]
+when = """ test "$STARSHIP_SHELL" "==" "bash" """

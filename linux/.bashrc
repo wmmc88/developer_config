@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DEV_CONFIG_LINUX_SCRIPT_DIR=$(dirname $BASH_SOURCE)
 
