@@ -11,4 +11,4 @@ if (Test-Path($ChocolateyProfile)) {
 Import-Module posh-git
 
 # ROS
-# . C:\dev\ros2_foxy\local_setup.ps1
+. C:\dev\ros2_rolling\install\local_setup.ps1

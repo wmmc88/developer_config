@@ -37,6 +37,11 @@
          * `notepad $PROFILE`
       2. Add the following line to the script :
          * `. '<SOME PATH>\developer_config\windows\Microsoft.PowerShell_profile.ps1'`
+   * Bash:
+      1. Open .bashrc:
+         * `gedit ~/.bashrc`
+      2. Add the following line to the script :
+         * `source "<SOME PATH>/developer_config/windows/.bashrc"`
 3. [Install Chocolatey](https://chocolatey.org/install) for packages not available in winget
 4. Install Windows Powertoys:
    * `winget install powertoys`
@@ -50,7 +55,9 @@
 8. Install [Rust](https://www.rust-lang.org/tools/install)
    * This should be done natively in Windows and also within WSL
 9.  Install [Starship](https://starship.rs/):
+   * You may want to do step 10 first because of starship's dependencies (ie. openssl, msvc, etc.)
    * These steps should be done natively in Windows and also within WSL
+     * In WSL, openssl dependency may need to be installed: `sudo apt install libssl-dev`
      * Install Starship from rust: `cargo install starship`
      * To update Starship: `cargo update starship`
 10.  Install ROS Rolling Ridley:
