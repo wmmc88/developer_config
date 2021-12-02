@@ -12,3 +12,19 @@ Import-Module posh-git
 
 # ROS
 . C:\dev\ros2_rolling\install\local_setup.ps1
+function Update-Ros-Rolling {
+  Set-Location \dev\ros2_rolling &&
+  curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos -o ros2.repos &&
+  vcs custom --args remote update &&
+  vcs import --input ros2.repos src &&
+  vcs pull src &&
+  colcon build --merge-install &&
+  Set-Location -
+}
+
+function Export-Ros-Rolling {
+  Set-Location \dev\ros2_rolling &&
+  vcs export src > my_ros2.repos &&
+  Get-Content my_ros2.repos &&
+  Set-Location -
+}
