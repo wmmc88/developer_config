@@ -12,6 +12,8 @@ Import-Module posh-git
 
 # ROS
 . C:\dev\ros2_rolling\install\local_setup.ps1
+. C:\Users\melvi\git-repos\ros2_upstream_ws\install\local_setup.ps1
+. C:\Users\melvi\git-repos\ros2_uwrt_ws\install\local_setup.ps1
 $env:Path = "C:\ProgramData\chocolatey\bin;$env:Path" # Force choco curl to be used instead of libcurl_vendor curl. libcurl_vendor has no ssl support(bug?)
 function Update-Ros-Rolling {
   Set-Location \dev\ros2_rolling &&
