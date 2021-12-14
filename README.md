@@ -54,19 +54,20 @@
    * `choco install firacode` in an Administrative Prompt
 8. Install [Rust](https://www.rust-lang.org/tools/install)
    * This should be done natively in Windows and also within WSL
-9.  Install [Starship](https://starship.rs/):
+9. Install [Starship](https://starship.rs/):
    * You may want to do step 10 first because of starship's dependencies (ie. openssl, msvc, etc.)
    * These steps should be done natively in Windows and also within WSL
      * In WSL, openssl dependency may need to be installed: `sudo apt install libssl-dev`
      * Install Starship from rust: `cargo install starship`
      * To update Starship: `cargo update starship`
-10.  Install ROS Rolling Ridley:
-   * Installing from Source Checkout: https://docs.ros.org/en/rolling/Installation/Windows-Development-Setup.html
-   * Maintaining Source Checkout: https://docs.ros.org/en/rolling/Installation/Maintaining-a-Source-Checkout.html 
+10. Install ROS Rolling Ridley:
+    * Installing from Source Checkout: https://docs.ros.org/en/rolling/Installation/Windows-Development-Setup.html
+    * Maintaining Source Checkout: https://docs.ros.org/en/rolling/Installation/Maintaining-a-Source-Checkout.html 
 11. Install act for local github actions:
-   * Requires Docker Desktop Installed
-   * `choco install act-cli` in an Administrative Prompt
-
+    * Requires Docker Desktop Installed
+    * `choco install act-cli` in an Administrative Prompt
+12. Sync Windows Terminal Settings:
+    * `New-Item -ItemType SymbolicLink -Path "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json" -Target <SOME PATH>/developer_config\windows\windows_terminal_settings.json -Force` in an Administrative Prompt
 ## Updating Packages
 
 * winget: `winget upgrade --all`
