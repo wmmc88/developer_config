@@ -1,0 +1,125 @@
+{
+	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate": "2023-10-01T21:57:21.877-00:00",
+	"Sources": [
+		{
+			"Packages": [
+				{
+					"PackageIdentifier": "7zip.7zip"
+				},
+				{
+					"PackageIdentifier": "AgileBits.1Password"
+				},
+				{
+					"PackageIdentifier": "Canonical.Ubuntu.2204"
+				},
+				{
+					"PackageIdentifier": "Discord.Discord"
+				},
+				{
+					"PackageIdentifier": "Docker.DockerDesktop"
+				},
+				{
+					"PackageIdentifier": "Git.Git"
+				},
+				{
+					"PackageIdentifier": "Jellyfin.JellyfinMediaPlayer"
+				},
+				{
+					"PackageIdentifier": "JetBrains.RustRover"
+				},
+				{
+					"PackageIdentifier": "LLVM.LLVM"
+				},
+				{
+					"PackageIdentifier": "Meld.Meld"
+				},
+				{
+					"PackageIdentifier": "Microsoft.CLRTypesSQLServer.2019"
+				},
+				{
+					"PackageIdentifier": "Microsoft.DevHome"
+				},
+				{
+					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.6"
+				},
+				{
+					"PackageIdentifier": "Microsoft.DotNet.Runtime.6"
+				},
+				{
+					"PackageIdentifier": "Microsoft.DotNet.SDK.7"
+				},
+				{
+					"PackageIdentifier": "Microsoft.Edge.Dev"
+				},
+				{
+					"PackageIdentifier": "Microsoft.EdgeWebView2Runtime"
+				},
+				{
+					"PackageIdentifier": "Microsoft.Office"
+				},
+				{
+					"PackageIdentifier": "Microsoft.OpenSSH.Beta"
+				},
+				{
+					"PackageIdentifier": "Microsoft.PowerShell"
+				},
+				{
+					"PackageIdentifier": "Microsoft.PowerToys"
+				},
+				{
+					"PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
+				},
+				{
+					"PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
+				},
+				{
+					"PackageIdentifier": "Microsoft.VisualStudio.2019.Enterprise"
+				},
+				{
+					"PackageIdentifier": "Microsoft.VisualStudio.2022.Enterprise"
+				},
+				{
+					"PackageIdentifier": "Microsoft.VisualStudioCode.Insiders"
+				},
+				{
+					"PackageIdentifier": "Microsoft.WindowsTerminal.Preview"
+				},
+				{
+					"PackageIdentifier": "Notepad++.Notepad++"
+				},
+				{
+					"PackageIdentifier": "NovaTechnology.Beeper"
+				},
+				{
+					"PackageIdentifier": "Nvidia.GeForceExperience"
+				},
+				{
+					"PackageIdentifier": "Nvidia.PhysX"
+				},
+				{
+					"PackageIdentifier": "Rustlang.Rustup"
+				},
+				{
+					"PackageIdentifier": "Starship.Starship"
+				},
+				{
+					"PackageIdentifier": "StephanDilly.gitui"
+				},
+				{
+					"PackageIdentifier": "VideoLAN.VLC"
+				},
+				{
+					"PackageIdentifier": "WinDirStat.WinDirStat"
+				}
+			],
+			"SourceDetails": {
+				"Argument": "https://cdn.winget.microsoft.com/cache",
+				"Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name": "winget",
+				"Type": "Microsoft.PreIndexed.Package"
+			}
+		}
+	],
+	"WinGetVersion": "1.7.2722-preview"
+}

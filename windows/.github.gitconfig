@@ -1,0 +1,9 @@
+[user]
+	email = melvin.mc.wang@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFOaf88/U2pmpwtmvPmJGL2tKvAx0SQfQvwmyGrHdyED
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "~/AppData/Local/1Password/app/8/op-ssh-sign.exe"
+[commit]
+  gpgsign = true

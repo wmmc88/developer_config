@@ -16,10 +16,6 @@
             "keys": "ctrl+v"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
             "command": 
             {
                 "action": "splitPane",
@@ -27,11 +23,21 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
         }
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": 
@@ -45,6 +51,8 @@
             {
                 "face": "Fira Code Retina"
             },
+            "historySize": 999999,
+            "startingDirectory": "D:\\git-repos",
             "suppressApplicationTitle": true
         },
         "list": 
@@ -53,91 +61,43 @@
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore",
-                "startingDirectory": "%USERPROFILE%\\git-repos"
+                "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "bellStyle": "audible",
-                "commandline": "ssh mmcwang@ecetesla2",
-                "font": 
-                {
-                    "face": "Fira Code Retina"
-                },
-                "guid": "{7b64321b-6be7-4afa-846d-405a315d97be}",
-                "hidden": true,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "ecetesla2",
-                "startingDirectory": "%USERPROFILE%",
-                "suppressApplicationTitle": true,
-                "tabTitle": "ecetesla2"
-            },
-            {
-                "bellStyle": "audible",
-                "commandline": "ssh mmcwang@ecetesla4",
-                "font": 
-                {
-                    "face": "Fira Code Retina"
-                },
-                "guid": "{80bb68f9-ee7c-4904-87a1-a54812e3d07d}",
-                "hidden": true,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "ecetesla4",
-                "startingDirectory": "%USERPROFILE%",
-                "suppressApplicationTitle": true,
-                "tabTitle": "ecetesla4"
-            },
-            {
-                "commandline": "pwsh.exe -NoExit -Command \"&{Import-Module \"\"\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll\"\"\"; Enter-VsDevShell 31333dd9 -SkipAutomaticLocation -DevCmdArguments \"\"\"-arch=x64 -host_arch=x64\"\"\"}\"",
-                "guid": "{5175f463-3782-5f22-b83d-04a5a65cd365}",
+                "commandline": "pwsh.exe -NoExit -Command \"& \"\"$env:ProgramFiles\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\Tools\\Launch-VsDevShell.ps1\"\"\"",
+                "guid": "{10e9963b-1c84-5654-947a-3c76a1c4e26d}",
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
-                "name": "Developer PowerShell for VS 2019",
-                "source": "Windows.Terminal.VisualStudio",
-                "startingDirectory": "%USERPROFILE%\\git-repos"
+                "name": "Developer PowerShell for VS 2022"
             },
             {
-                "guid": "{9c3cfe92-c484-50a7-bbcc-0972666e6195}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{8dfc98dd-bf9b-5288-ac73-d71c57142946}",
+                "commandline": "pwsh.exe -NoExit -Command \"& \"\"${env:ProgramFiles(x86)}\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\Tools\\Launch-VsDevShell.ps1\"\"\"",
+                "guid": "{ec147ba7-3d33-5c94-803d-c7470f4eb980}",
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
-                "name": "Developer PowerShell for VS 2022 [Preview]",
-                "source": "Windows.Terminal.VisualStudio"
+                "name": "Developer PowerShell for VS 2019"
             },
             {
-                "guid": "{d417a6b0-7cbc-5ab5-a36f-c434d78d8548}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2022 [Preview]",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": true,
-                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": true,
+                "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
@@ -328,6 +288,29 @@
             "yellow": "#C4A000"
         },
         {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -350,5 +333,6 @@
             "white": "#C0C0C0",
             "yellow": "#808000"
         }
-    ]
+    ],
+    "themes": []
 }

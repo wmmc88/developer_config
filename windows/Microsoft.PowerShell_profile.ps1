@@ -7,26 +7,19 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
-# Posh-Git
+# Posh-Git (for git tab-completion)
 Import-Module posh-git
 
-# ROS
-. C:\dev\ros2_rolling\install\local_setup.ps1
-. C:\Users\melvi\git-repos\ros2_upstream_ws\install\local_setup.ps1
-. C:\Users\melvi\git-repos\ros2_uwrt_ws\install\local_setup.ps1
-$env:Path = "C:\ProgramData\chocolatey\bin;$env:Path" # Force choco curl to be used instead of libcurl_vendor curl. libcurl_vendor has no ssl support(bug?)
-function Update-Ros-Rolling {
-  Set-Location \dev\ros2_rolling &&
-  curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos -o ros2.repos &&
-  vcs custom --args remote update &&
-  vcs import --input ros2.repos src &&
-  vcs pull src &&
-  colcon build --merge-install &&
-  Set-Location -
-}
-function Export-Ros-Rolling {
-  Set-Location \dev\ros2_rolling &&
-  vcs export src > my_ros2.repos &&
-  Get-Content my_ros2.repos &&
-  Set-Location -
-}
+# Tools Root
+$env:TOOLS_ROOT = "D:\.tools"
+
+# Rustup home
+$env:RUSTUP_HOME = "$env:TOOLS_ROOT\.rustup"
+
+# cargo cache
+$env:CARGO_HOME = "$env:TOOLS_ROOT\.cargo"
+
+# sccache for rust
+$env:RUSTC_WRAPPER = "sccache"
+$env:SCCACHE_DIR = "$env:TOOLS_ROOT\.sccache"
+$env:SCCACHE_CACHE_SIZE="150G"

@@ -1,0 +1,7 @@
+[core]
+  # Force OpenSSH to use 1Password git integration
+  sshCommand = 'C:/Program Files/OpenSSH/ssh.exe'
+[user]
+  name = Melvin Wang
+[includeIf "gitdir:D:/git-repos/github/"]
+  path = ./.github.gitconfig

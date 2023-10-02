@@ -1,11 +1,19 @@
-format = "${custom.bash_active}${custom.powershell_active}$all"
+format = "$os$container$shell$all"
 
-[custom.powershell_active] # runs in powershell, fails silently otherwise
-command = 'Write-Output "($env:STARSHIP_SHELL)"'
-description = "Show the current active shell"
-when = """($env:STARSHIP_SHELL -eq 'powershell')"""
+[os]
+format = '$symbol[$edition\($version\)]($style) '
+style = "bold blue"
+disabled = false
 
-[custom.bash_active] # runs in bash, fails silently otherwise
-command = "echo -n '('$STARSHIP_SHELL')'"
-description = "Show the current active shell"
-when = """ test "$STARSHIP_SHELL" "==" "bash" """
+[shell]
+format = '[\($indicator\)]($style) '
+bash_indicator = 'bash'
+powershell_indicator = 'pwsh'
+tcsh_indicator = 'tcsh'
+unknown_indicator = 'unknown shell'
+style = 'bold green'
+disabled = false
+
+[time]
+disabled = false
+use_12hr = true
