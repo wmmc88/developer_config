@@ -66,10 +66,10 @@
      * `cargo binstall sccache`
    * To keep everything up to date, use topgrade:
      * `cargo binstall topgrade`
-       * Sync `topgrade` config: wdknqdqojdnqjndqonjwdnqwodjonwq
-* `cargo binstall coreutils du-dust bat mprocs ripgrep irust evcxr_jupyter bacon speedtest-rs eza`
+       * Sync `topgrade` config: `New-Item -ItemType SymbolicLink -Path "$env:APPDATA\topgrade.toml" -Target "D:\git-repos\github\developer_config\windows\topgrade.toml" -Force` in an Administrative Prompt
+   * `cargo binstall coreutils du-dust bat mprocs ripgrep irust evcxr_jupyter bacon speedtest-rs eza`
 
-1. Install ROS Rolling Ridley:
+10. Install ROS Rolling Ridley:
     * Installing from Source Checkout: https://docs.ros.org/en/rolling/Installation/Windows-Development-Setup.html
     * Maintaining Source Checkout: https://docs.ros.org/en/rolling/Installation/Maintaining-a-Source-Checkout.html
 
